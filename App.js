@@ -7,7 +7,7 @@ import {
   Text
 } from 'react-native';
 
-import InputSearchButton from './components/InputSearchButton';
+import InputSearchButton from './src/components/InputSearchButton';
 
 const list = [
   {
