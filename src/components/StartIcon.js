@@ -1,56 +1,34 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {Icon} from 'react-native-elements';
 
-const StartIcon = props => {
+export default StartIcon = props => {
   return (
     <View style={styles.container}>
-      <View style={styles.icnContainer}>
-        <Text style={styles.icon}>Icn</Text>
-      </View>
-      <View style={styles.iconTextContainer}>
-        <Text style={styles.iconText}>
-          <Text style={styles.boldText}>Cocktail</Text>Finder
-        </Text>
-      </View>
+      <Icon 
+        name="cocktail" 
+        type="font-awesome" 
+        color="#fff7f7" 
+        size={46} 
+      />
+      <Text style={styles.title}>
+        <Text style={styles.boldTitle}>Cocktail</Text>Finder
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    marginTop: '40%',
-    marginVertical: 30
-  },
-  icnContainer: {
-    marginBottom: 30,
-    width: '100%',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  icon: {
-    padding: 16,
-    height: 80,
-    width: '50%',
-    fontWeight: '300',
-    borderWidth: 16,
-    borderStyle: 'dotted',
-    borderRadius: 19,
-    textAlign: 'center'
-  },
-  iconTextContainer: {
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  iconText: {
-    fontSize: 31,
+  title: {
+    fontSize: 15,
     letterSpacing: 3,
   },
-  boldText: {
-    fontSize: 31,
+  boldTitle: {
     fontWeight: 'bold',
   },
 });
-
-export default StartIcon;
