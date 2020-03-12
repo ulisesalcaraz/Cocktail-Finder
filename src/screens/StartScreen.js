@@ -1,19 +1,26 @@
 import React from 'react';
-import { View, Text, Stylesheet, Button } from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-const StartScreen = props => {
-    return(
-        <View>
-            <Text>
-                Start Screen
-            </Text>
-            <Button title="Search" onPress={() => {
-                props.navigation.navigate('Search');
-            }} />
-        </View>
-    );
-}
+const StartScreen = ({navigation}) => {
+  return (
+    <View style={styles.container}>
+      <Text>Start Screen</Text>
+      <Button
+        title="Search"
+        onPress={() => {
+          navigation.navigate('Search');
+        }}
+      />
+    </View>
+  );
+};
 
-const styles = Stylesheet.create({
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
+
+export default StartScreen;

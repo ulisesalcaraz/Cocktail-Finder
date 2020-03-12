@@ -1,22 +1,27 @@
 import React from 'react';
-import {
+/* import {
   StyleSheet,
   View,
   TouchableWithoutFeedback,
   Keyboard,
-  Text
-} from 'react-native';
+  Text,
+} from 'react-native'; */
+
+import {Provider} from 'react-redux';
 
 import SearchNavigator from './src/navigation/SearchNavigator';
+import store from './src/redux/store';
+
+//const store = generateStore();
 
 const App = () => {
-  return(
-    <SearchNavigator />
-);
+  return <SearchNavigator />;
 };
 
-const styles = StyleSheet.create({
-  
-});
+//const styles = StyleSheet.create({});
 
-export default App;
+export default (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
